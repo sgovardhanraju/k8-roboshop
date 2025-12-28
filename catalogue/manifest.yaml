@@ -31,7 +31,7 @@ spec:
         - name: liveness-port
           containerPort: 8080
         readinessProbe:
-          httoGet:
+          httpGet:
             path: /health
             port: liveness-port
           failureThreshold: 1
