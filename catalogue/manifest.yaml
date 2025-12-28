@@ -15,7 +15,7 @@ spec:
     matchLabels:
       project: roboshop
       component: catalogue
-      tier: bakend
+      tier: backend
   # pod definition
   template:
     metadata:
