@@ -27,28 +27,28 @@ spec:
       containers:
       - name: mongodb
         image: gsurapuraju/mongodb:v1
-        readinessProbe:
-          tcpSocket:
-            port: 27017
-          initialDelaySeconds: 10
-          periodSeconds: 10
-        livenessProbe:
-          tcpSocket:
-            port: 27017
-          initialDelaySeconds: 5
-          periodSeconds: 5
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: mongodb
-  namespace: roboshop
-spec:
-  selector:
-    project: roboshop
-    component: mongodb
-    tier: db
-  ports:
-    - protocol: TCP
-      port: 27017 # service port
-      targetPort: 27017 # container port
+#         readinessProbe:
+#           tcpSocket:
+#             port: 27017
+#           initialDelaySeconds: 10
+#           periodSeconds: 10
+#         livenessProbe:
+#           tcpSocket:
+#             port: 27017
+#           initialDelaySeconds: 5
+#           periodSeconds: 5
+# ---
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: mongodb
+#   namespace: roboshop
+# spec:
+#   selector:
+#     project: roboshop
+#     component: mongodb
+#     tier: db
+#   ports:
+#     - protocol: TCP
+#       port: 27017 # service port
+#       targetPort: 27017 # container port
