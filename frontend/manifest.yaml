@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: user
+  name: frontend
   namespace: roboshop
   # these are replica set labels
   labels:
@@ -25,7 +25,7 @@ spec:
         tier: frontend
     spec:
       containers:
-      - name: user
+      - name: frontend
         image: gsurapuraju/frontend:v1
         imagePullPolicy: Always
         ports:
@@ -47,7 +47,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: user
+  name: frontend
   namespace: roboshop
 spec:
   type: LoadBalancer
