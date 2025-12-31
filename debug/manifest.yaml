@@ -9,5 +9,5 @@ metadata:
 spec:
   containers:
     - name: debug
-      image: gsurapuraju/debug:v1
+      image: joindevops/debug:v1
       imagePullPolicy: Always
